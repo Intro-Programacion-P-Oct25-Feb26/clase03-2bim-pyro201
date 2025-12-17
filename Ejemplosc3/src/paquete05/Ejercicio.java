@@ -17,13 +17,27 @@ public class Ejercicio {
         int[][] estaciones = new int[5][12];
         String[] nombres = new String[5];
         int[] produ = new int[5];
+        String report = "";
 
         for (int fila = 0; fila < estaciones.length; fila++) {
+            
             System.out.println("Ingrese el nombre de la estacion");
             nombres[fila]= entrada.nextLine();
+            int suma= 0;
             for (int col = 0; col < estaciones[fila].length; col++) {
-                
+                System.out.printf("Ingrese la produccion del mes%s\n",col+1);
+                int produccion = entrada.nextInt();
+                entrada.nextLine();
+                suma = suma + produccion;
+                estaciones[fila][col]= produccion;  
             }
+            produ[fila]=suma;
+            report = String.format("%sestacion de %s - Total Produccion : $%s\n"
+                    ,report,nombres[fila],produ[fila]);
+            System.out.println(report);
         }
+        
+            
+        
         }
     }
