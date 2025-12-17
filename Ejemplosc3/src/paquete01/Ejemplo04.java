@@ -27,7 +27,7 @@ public class Ejemplo04 {
         
         };
         
-        int suma;
+        int suma=0;
         
         for (int fila = 0; fila < arreglo1.length; fila++) { // 0<2 // 1<2
             // suma = 0;
